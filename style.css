@@ -1,0 +1,98 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+}
+
+/* Animated title */
+.animated-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Marquee effect */
+.marquee {
+    font-size: 1.2rem;
+    color: #333;
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin: 20px 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marqueeScroll 10s linear infinite;
+}
+
+/* Animation for the image */
+.animated-img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    animation: zoomIn 3s ease-out infinite alternate, skewEffect 3s ease-in-out infinite alternate;
+}
+
+/* Animation for the clickable areas */
+.animated-area {
+    transition: transform 0.3s ease-in-out;
+}
+
+.animated-area:hover {
+    transform: scale(1.1);
+}
+
+/* Keyframe for title fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframe for image zoom-in */
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+/* Keyframe for marquee scroll */
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Keyframe for image skew effect */
+@keyframes skewEffect {
+    0% {
+        transform: skewX(0deg);
+    }
+    50% {
+        transform: skewX(10deg);
+    }
+    100% {
+        transform: skewX(0deg);
+    }
+}
